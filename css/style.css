@@ -1,8 +1,19 @@
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  text-align: center;
+
+.chessboard { 
+    padding: 0px; 
+    margin: 0 auto; 
+    border: 2px solid #181818; 
 }
-.item {
-    text-align: center;
+
+.chessboard tr td { 
+    width: 60px; 
+    height: 60px; 
 }
+
+.chessboard tr:nth-child(2n) td:nth-child(2n+1) { 
+    background: #9f9f9f; 
+}
+  
+.chessboard tr:nth-child(2n+1) td:nth-child(2n) { 
+    background: #9f9f9f; 
+} 
