@@ -22,10 +22,11 @@ document.addEventListener('click', event => {
         let squareName = event.toElement.id;
         if(!start.innerText){
             start.innerText = squareName;
-            document.getElementById(squareName).classList.add("red");
+            document.getElementById(squareName).classList.add('red');
+            document.getElementById(squareName).setAttribute('style', 'background: #ff0000a3;');
         } else if(!end.innerText) {
             end.innerText = squareName;
-            document.getElementById(squareName).classList.add("red");
+            document.getElementById(squareName).setAttribute('style', 'background: #ff0000a3;');
         }
     }
 }, false);
@@ -42,8 +43,12 @@ getPath.addEventListener('click', async function(event){
         Object.keys(json).map(square => {
             let div = document.createElement('div');
             div.innerHTML = `<div>Step ${square}:  ${json[square]}</div></br>`;
+            if(square != 1){
+                document.getElementById(json[square]).setAttribute('style', 'background: yellow;');;
+            }
             result.appendChild(div);
         });
+        document.getElementById(end.innerText).setAttribute('style', 'background: #ff0000a3;');;
     }else {
         alert('You have not selected the start and stop square.')
     }
@@ -54,16 +59,16 @@ clearButton.addEventListener('click', event =>{
 });
 
 
-document.addEventListener('touchstart', event => {
-    //this was created as a temporary solution to handle touch events on a phone
-    if ( event.target.classList.contains('item') ) {
-        let squareName = event.toElement.id;
-        if(!start.innerText){
-            start.innerText = squareName;
-            document.getElementById(squareName).classList.add("red");
-        } else if(!end.innerText) {
-            end.innerText = squareName;
-            document.getElementById(squareName).classList.add("red");
-        }
-    }
-}, false);
+// document.addEventListener('touchstart', event => {
+//     //this was created as a temporary solution to handle touch events on a phone
+//     if ( event.target.classList.contains('item') ) {
+//         let squareName = event.toElement.id;
+//         if(!start.innerText){
+//             start.innerText = squareName;
+//             document.getElementById(squareName).classList.add("red");
+//         } else if(!end.innerText) {
+//             end.innerText = squareName;
+//             document.getElementById(squareName).classList.add("red");
+//         }
+//     }
+// }, false);
