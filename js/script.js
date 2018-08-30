@@ -54,7 +54,7 @@ clearButton.addEventListener('click', event =>{
 });
 
 
-document.addEventListener('touch', event => {
+document.addEventListener('touchstart', event => {
     //this was created as a temporary solution to handle touch events on a phone
     if ( event.target.classList.contains('item') ) {
         let squareName = event.toElement.id;
