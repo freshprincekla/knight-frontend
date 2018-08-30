@@ -37,6 +37,7 @@
 }
 .getPath {
     margin-top: 15px;
+    padding-bottom: 20px;
     width: 20%;
 }
 .path__button , .clear__button{
@@ -52,4 +53,5 @@
 
 .details {
     margin: 25px;
+    text-align: center;
 }
