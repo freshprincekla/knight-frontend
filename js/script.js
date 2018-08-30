@@ -1,4 +1,4 @@
-const chessRows = ['a','b','c','d','e','f','g','h'];// an array consisting of all the 
+const chessRows = ['a','b','c','d','e','f','g','h'];// an array consisting of all the rows
 let wrapper = document.getElementById('wrapper');
 let possiblePlaces = chessRows.map((letter)=>{
     //Create the chessboard
@@ -11,6 +11,20 @@ let possiblePlaces = chessRows.map((letter)=>{
     }
     wrapper.appendChild(row);
 });
+
+document.addEventListener('click', function (event) {
+    if ( event.target.classList.contains('item') ) {
+        let squareName = event.toElement.id;
+        let start = document.getElementById('start');
+        if(!start.innerText){
+            start.innerText = squareName;
+        } else {
+            let end = document.getElementById('end');
+            end.innerText = squareName;
+        }
+        
+    }
+}, false);
 
 
 
