@@ -37,11 +37,17 @@
 }
 .getPath {
     margin-top: 15px;
+    width: 40%;
 }
-.path__button {
+.path__button , .clear__button{
     background: #4949d8bf;
     color: #fff;
     border: #000;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.clear__button {
+    margin-left: 20px;   
 }
 
 .details {
