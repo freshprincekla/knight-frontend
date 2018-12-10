@@ -1,57 +1,60 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-.chessboard { 
-    padding: 0px; 
-    margin: 0 auto; 
-    border: 2px solid #181818; 
-}
-
-.chessboard td { 
-    width: 60px; 
-    height: 60px; 
+.chessboard {
+  padding: 0px;
+  margin: 0 auto;
+  border: 2px solid #181818;
 }
 
-.chessboard tr:nth-child(2n) td:nth-child(2n+1) { 
-    background: #9f9f9f; 
+.chessboard td {
+  width: 60px;
+  height: 60px;
 }
-  
-.chessboard tr:nth-child(2n+1) td:nth-child(2n) { 
-    background: #9f9f9f; 
-} 
+
+.chessboard tr:nth-child(2n) td:nth-child(2n + 1) {
+  background: #9f9f9f;
+}
+
+.chessboard tr:nth-child(2n + 1) td:nth-child(2n) {
+  background: #9f9f9f;
+}
 .item {
-    display: block;
-    width: 100%; 
-    height: 100%;
-    text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .red {
-    background: #ff0000a3;
+  background: #ff0000a3;
 }
 
-.start , .end , .getPath {
-    width: 20%;
-    margin: 0 auto;
-    font-size: 16px;
+.start,
+.end,
+.getPath {
+  width: 20%;
+  margin: 0 auto;
+  font-size: 16px;
 }
 .getPath {
-    margin-top: 15px;
-    padding-bottom: 20px;
-    width: 20%;
+  margin-top: 15px;
+  padding-bottom: 20px;
+  width: 20%;
 }
-.path__button , .clear__button{
-    background: #4949d8bf;
-    color: #fff;
-    border: #000;
-    padding: 10px 5px;
-    border-radius: 5px;
+.path__button,
+.clear__button {
+  background: #4949d8bf;
+  color: #fff;
+  border: #000;
+  padding: 10px 5px;
+  border-radius: 5px;
 }
 .clear__button {
-    margin-left: 20px;   
+  margin-left: 20px;
 }
 
 .details {
-    margin: 25px;
-    text-align: center;
+  margin: 25px;
+  text-align: center;
 }
